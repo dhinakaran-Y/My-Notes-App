@@ -14,7 +14,7 @@
 }
 
 .card-title {
- @apply text-2xl font-semibold mt-5
+ @apply text-2xl font-semibold mt-5 capitalize;
 }
 
 dialog::backdrop{
