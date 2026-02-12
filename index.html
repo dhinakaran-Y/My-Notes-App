@@ -14,22 +14,22 @@
   <header class="py-3 flex justify-between items-center px-5 md:px-[5vw] border-b border-gray-300 dark:border-gray-800">
     <!-- left -->
     <div class="flex space-x-2 justify-center items-center">
-      <img src="./images/logo.png" alt="logo" class="w-18">
-      <h3 class="text-5xl font-bold text-violet-600">my notes</h3>
+      <img src="./images/logo.png" alt="logo" class="w-12 md:w-18">
+      <h3 class="text-2xl md:text-5xl font-bold text-violet-600">my notes</h3>
     </div>
     <!-- right -->
     <div class="flex space-x-5">
       <div class="flex-col text-center justify-items-center">
         <button type="button" id="create-note-btn" title="add note"
-          class="bg-violet-600 cursor-pointer hover:brightness-110 active:scale-95 transition-all duration-300 text-white rounded-full w-15 h-15 shadow">
+          class="bg-violet-600 cursor-pointer hover:brightness-110 active:scale-95 transition-all duration-300 text-white rounded-full max-sm:w-12 max-sm:h-12  w-15 h-15 shadow">
           <span class="text-4xl font-extrabold mb-2 flex justify-center">+</span>
         </button>
-        <p class="font-semibold">Add note</p>
+        <p class="font-semibold max-sm:hidden">Add note</p>
       </div>
 
       <!-- toggle btn -->
       <div class="flex-col justify-items-center">
-        <div class="flex justify-center items-center h-15 w-15 rounded-full">
+        <div class="flex justify-center items-center max-sm:h-12 max-sm:w-12 h-15 w-15 rounded-full">
           <label for="theme-toggle-btn" class="flex justify-center items-center cursor-pointer">
             <input type="checkbox" value="" id="theme-toggle-btn" class="hidden">
             <!-- sun -->
@@ -110,7 +110,7 @@
             </div>
           </label>
         </div>
-        <p class="font-semibold">Mode</p>
+        <p class="font-semibold  max-sm:hidden">Mode</p>
       </div>
     </div>
   </header>
