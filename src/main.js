@@ -222,7 +222,7 @@ function renderNotesFn() {
       cardEl.append(cardTitleEL);
 
       const cardContentEL = document.createElement("pre");
-      cardContentEL.classList.add("card-content");
+      cardContentEL.classList.add("text-pretty");
       cardContentEL.textContent = note.content;
       cardEl.append(cardContentEL);
 
