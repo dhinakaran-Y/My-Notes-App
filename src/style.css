@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.btn{
+  @apply flex space-x-2 justify-center items-center px-3 py-2 rounded text-white hover:brightness-110 active:scale-105 cursor-pointer
+}
+
+.card{
+  @apply relative rounded-2xl shadow-lg p-5 space-y-2 hover:scale-105 transition-all duration-300;
+}
+
+.card-action {
+  @apply absolute top-2 right-3 flex space-x-2 *:p-1  *:text-gray-500 *:cursor-pointer *:rounded *:hover:*:scale-125  **:transition-all **:duration-300 *:hover:text-slate-900 dark:*:hover:text-white  *:active:*:-rotate-12
+}
+
+.card-title {
+ @apply text-2xl font-semibold mt-5
+}
+
+dialog::backdrop{
+  @apply bg-black/50;
+  backdrop-filter: blur(4px);
+}
+
+.form-group{
+  @apply flex flex-col space-y-1
+}

@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <title>My Notes || Dhinakaran-Y</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="bg-gray-200 dark:bg-slate-950 dark:text-white">
+  <header class="py-2 flex justify-between items-center px-5 md:px-[5vw] border-b border-gray-300 dark:border-gray-800">
+    <!-- left -->
+    <div class="flex space-x-2 justify-center items-center">
+      <img src="./images/logo.png" alt="logo" class="w-12">
+      <h3 class="text-2xl font-bold text-violet-600">My Notes</h3>
+    </div>
+    <!-- right -->
+    <div class="flex space-x-5">
+      <div class="flex-col text-center justify-items-center">
+        <button type="button" id="create-note-btn" title="add note"
+          class="bg-violet-600 cursor-pointer hover:brightness-110 active:scale-95 transition-all duration-300 text-white rounded-full w-15 h-15 shadow">
+          <span class="text-4xl font-extrabold mb-2 flex justify-center">+</span>
+        </button>
+        <p class="font-semibold">Add note</p>
+      </div>
+
+      <!-- toggle btn -->
+      <div class="flex-col justify-items-center">
+        <div class="flex justify-center items-center h-15 w-15 rounded-full">
+          <label for="theme-toggle-btn" class="flex justify-center items-center cursor-pointer">
+            <input type="checkbox" value="" id="theme-toggle-btn" class="hidden">
+            <!-- sun -->
+            <div class="" id="sun-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt -->
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path stroke-dasharray="36" stroke-dashoffset="36"
+                    d="M12 7c2.76 0 5 2.24 5 5c0 2.76 -2.24 5 -5 5c-2.76 0 -5 -2.24 -5 -5c0 -2.76 2.24 -5 5 -5">
+                    <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="36;0" />
+                  </path>
+                  <path stroke-dasharray="2" stroke-dashoffset="2" d="M12 19v1M19 12h1M12 5v-1M5 12h-1">
+                    <animate fill="freeze" attributeName="d" begin="0.5s" dur="0.2s"
+                      values="M12 19v1M19 12h1M12 5v-1M5 12h-1;M12 21v1M21 12h1M12 3v-1M3 12h-1" />
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="2;0" />
+                  </path>
+                  <path stroke-dasharray="2" stroke-dashoffset="2"
+                    d="M17 17l0.5 0.5M17 7l0.5 -0.5M7 7l-0.5 -0.5M7 17l-0.5 0.5">
+                    <animate fill="freeze" attributeName="d" begin="0.7s" dur="0.2s"
+                      values="M17 17l0.5 0.5M17 7l0.5 -0.5M7 7l-0.5 -0.5M7 17l-0.5 0.5;M18.5 18.5l0.5 0.5M18.5 5.5l0.5 -0.5M5.5 5.5l-0.5 -0.5M5.5 18.5l-0.5 0.5" />
+                    <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" values="2;0" />
+                  </path>
+                </g>
+              </svg>
+            </div>
+            <!-- moon -->
+            <div class="" id="moon-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                viewBox="0 0 24 24"><!-- Icon from Material Line Icons by Vjacheslav Trushkin - https://github.com/cyberalien/line-md/blob/master/license.txt -->
+                <path fill-opacity="0"
+                  d="M15.22 6.03L17.75 4.09L14.56 4L13.5 1L12.44 4L9.25 4.09L11.78 6.03L10.87 9.09L13.5 7.28L16.13 9.09L15.22 6.03Z"
+                  fill="currentColor">
+                  <animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.4s" values="0;1" />
+                </path>
+                <path fill-opacity="0"
+                  d="M19.61 12.25L21.25 11L19.19 10.95L18.5 9L17.81 10.95L15.75 11L17.39 12.25L16.8 14.23L18.5 13.06L20.2 14.23L19.61 12.25Z"
+                  fill="currentColor">
+                  <animate fill="freeze" attributeName="fill-opacity" begin="1s" dur="0.4s" values="0;1" />
+                </path>
+                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <g>
+                    <path stroke-dasharray="2" stroke-dashoffset="4" d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
+                      <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="4;2" />
+                    </path>
+                    <path stroke-dasharray="2" stroke-dashoffset="4"
+                      d="M18.5 18.5l0.5 0.5M18.5 5.5l0.5 -0.5M5.5 5.5l-0.5 -0.5M5.5 18.5l-0.5 0.5">
+                      <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="4;2" />
+                    </path>
+                    <set fill="freeze" attributeName="opacity" begin="0.5s" to="0" />
+                  </g>
+                  <path
+                    d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z"
+                    opacity="0">
+                    <set fill="freeze" attributeName="opacity" begin="0.5s" to="1" />
+                  </path>
+                </g>
+                <mask id="SVGBsVgBdfm">
+                  <circle cx="12" cy="12" r="12" fill="#fff" />
+                  <circle cx="12" cy="12" r="4">
+                    <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="4;8" />
+                  </circle>
+                  <circle cx="22" cy="2" r="3" fill="#fff">
+                    <animate fill="freeze" attributeName="cx" begin="0.1s" dur="0.4s" values="22;18" />
+                    <animate fill="freeze" attributeName="cy" begin="0.1s" dur="0.4s" values="2;6" />
+                    <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="3;12" />
+                  </circle>
+                  <circle cx="22" cy="2" r="1">
+                    <animate fill="freeze" attributeName="cx" begin="0.1s" dur="0.4s" values="22;18" />
+                    <animate fill="freeze" attributeName="cy" begin="0.1s" dur="0.4s" values="2;6" />
+                    <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="1;10" />
+                  </circle>
+                </mask>
+                <circle cx="12" cy="12" r="6" mask="url(#SVGBsVgBdfm)" fill="currentColor">
+                  <animate fill="freeze" attributeName="r" begin="0.1s" dur="0.4s" values="6;10" />
+                  <set fill="freeze" attributeName="opacity" begin="0.5s" to="0" />
+                </circle>
+              </svg>
+            </div>
+          </label>
+        </div>
+        <p class="font-semibold">Mode</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="lg:px-[5vw] px-5 my-10 grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-4" id="container-div">
+    <!-- card -->
+    <!-- <div class="card">
+           
+           <div class="card-action">
+
+             <div title="edit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                viewBox="0 0 24 24">
+                <path fill="currentColor"
+                  d="M5 19h1.425L16.2 9.225L14.775 7.8L5 17.575zm-2 2v-4.25L16.2 3.575q.3-.275.663-.425t.762-.15t.775.15t.65.45L20.425 5q.3.275.438.65T21 6.4q0 .4-.137.763t-.438.662L7.25 21zM19 6.4L17.6 5zm-3.525 2.125l-.7-.725L16.2 9.225z" />
+              </svg>
+             </div>
+
+              <div title="delete">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewBox="0 0 24 24">
+                  <path fill="currentColor"
+                    d="M7 21q-.825 0-1.412-.587T5 19V6H4V4h5V3h6v1h5v2h-1v13q0 .825-.587 1.413T17 21zM17 6H7v13h10zM9 17h2V8H9zm4 0h2V8h-2zM7 6v13z" />
+                </svg>
+              </div>
+           </div>
+
+          <h2 class="card-title">Title-1</h2>
+          <p class="card-content">dndkn jdnjdn djnfj jjnfjf fjsdfnj jsnfjsn jssjnfs snjfn sjfsnjf</p>
+         </div> -->
+  </main>
+
+  <!-- alert -->
+  <div class="mx-5 lg:mx-[5vw] my-10 flex justify-center items-center gap-4" id="no-notes-div">
+    <div class="text-center flex-col justify-items-center space-y-4">
+      <button type="button" id="create-note-btn-2" title="add note"
+        class="bg-violet-600 *:stroke-1 *:stroke-white flex justify-center items-center cursor-pointer hover:brightness-110 active:scale-95 transition-all duration-300 text-white rounded-full w-20 h-20 shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2z" />
+        </svg>
+      </button>
+      <div class="space-y-1.5">
+        <h3 class="text-2xl font-semibold">No notes yet</h3>
+        <p>Create your first note.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- input div -->
+  <dialog class="m-auto w-2xl rounded-2xl bg-gray-100 dark:bg-slate-800 dark:text-white p-8" closedby="any"
+    id="dialog-div">
+    <!-- close -->
+    <button type="button"
+      class="absolute top-3 right-3 text-gray-400! btn hover:bg-gray-300  dark:hover:bg-slate-700 outline-none"
+      id="dialog-close-btn" title="close">X</button>
+    <!-- head -->
+    <div class="mb-5">
+      <h2 class="text-xl font-semibold" id="dialog-title">Add New Note</h2>
+    </div>
+    <!-- b -->
+    <form class="space-y-4" id="note-form">
+      <!-- title -->
+      <div class="form-group">
+        <label for="note-title">Title</label>
+        <input type="text" id="note-title"
+          class="p-3 bg-gray-200 dark:bg-slate-700 rounded-lg focus:outline-2 outline-violet-300 dark:outline-violet-400 "
+          placeholder="Enter note title..." autofocus>
+        <small class="text-red-500 hidden">Enter valid input...</small>
+      </div>
+      <!-- content -->
+      <div class="form-group">
+        <label for="note-content">Content</label>
+        <textarea name="note-content" id="note-content"
+          class="p-3 bg-gray-200 dark:bg-slate-700 rounded-lg focus:outline-2 outline-violet-300 dark:outline-violet-400"
+          placeholder="Write your note here..." rows="10"></textarea>
+        <small class="text-red-500 hidden">Enter valid input...</small>
+      </div>
+      <!-- last ??? -->
+      <!-- color -->
+      <div class="flex space-x-2 justify-evenly my-4">
+        <div class="form-group">
+          <input type="radio" id="slate" name="color" value="bg-white dark:bg-slate-800" class="peer invisible" checked
+            autofocus required>
+          <label for="slate"
+            class="h-7 w-7 peer-checked:scale-110 peer-checked:outline-2 bg-white shadow dark:bg-slate-600 rounded-full cursor-pointer"></label>
+        </div>
+        <div class="form-group">
+          <input type="radio" id="green" name="color" value="bg-green-200 dark:bg-green-400" class="peer invisible"
+            required>
+          <label for="green"
+            class="h-7 w-7 peer-checked:scale-110 shadow peer-checked:outline-2 bg-green-300 rounded-full cursor-pointer"></label>
+        </div>
+
+        <div class="form-group">
+          <input type="radio" id="yellow" name="color" value="bg-yellow-200 dark:bg-yellow-400" class="peer invisible"
+            required>
+          <label for="yellow"
+            class="h-7 w-7 peer-checked:scale-110 shadow peer-checked:outline-2 bg-yellow-300 rounded-full cursor-pointer"></label>
+        </div>
+        <div class="form-group">
+          <input type="radio" id="violet" name="color" value="bg-violet-200 dark:bg-violet-400" class="peer invisible"
+            required>
+          <label for="violet"
+            class="h-7 w-7 peer-checked:scale-110 shadow peer-checked:outline-2 bg-violet-300 rounded-full cursor-pointer"></label>
+        </div>
+      </div>
+      <!-- action -->
+      <div class="flex justify-end space-x-3 mt-">
+        <button type="reset" class="btn bg-gray-400" id="clear-btn">Clear</button>
+        <button type="submit" class="btn bg-violet-500" id="save-btn">Save note</button>
+      </div>
+    </form>
+
+  </dialog>
+
+  <!-- js -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
