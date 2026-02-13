@@ -235,6 +235,9 @@ function renderNotesFn() {
 }
 
 function deleteNoteFn(noteID) {
+  const confirmAlert = confirm("Do you want to delete this note ?")
+  if (!confirmAlert) return;
+  
   notes = notes.filter((note) => note.id !== noteID);
   storeInLocalFn();
   renderNotesFn();
