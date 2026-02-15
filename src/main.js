@@ -197,7 +197,7 @@ function renderNotesFn() {
       cardEl.append(actionDivEl);
 
       const editBtnEL = document.createElement("button");
-      editBtnEL.setAttribute("title", "edit")
+      editBtnEL.setAttribute("title", "edit");
       editBtnEL.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                 viewBox="0 0 24 24">
                 <path fill="currentColor"
@@ -207,7 +207,7 @@ function renderNotesFn() {
       actionDivEl.append(editBtnEL);
 
       const deleteBtnEL = document.createElement("button");
-      deleteBtnEL.setAttribute("title", "delete")
+      deleteBtnEL.setAttribute("title", "delete");
       deleteBtnEL.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                   viewBox="0 0 24 24">
                   <path fill="currentColor"
@@ -235,9 +235,9 @@ function renderNotesFn() {
 }
 
 function deleteNoteFn(noteID) {
-  const confirmAlert = confirm("Do you want to delete this note ?")
+  const confirmAlert = confirm("Do you want to delete this note ?");
   if (!confirmAlert) return;
-  
+
   notes = notes.filter((note) => note.id !== noteID);
   storeInLocalFn();
   renderNotesFn();
